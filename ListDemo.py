@@ -34,3 +34,4 @@ print(a[::-1]) #all
 
 
 #array 
+

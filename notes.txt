@@ -1,0 +1,7 @@
+#number of instructions 
+
+best case 
+avg case 
+worst case  : Big O => O(n)
+
+

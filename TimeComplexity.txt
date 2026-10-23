@@ -1,0 +1,247 @@
+time complexity ==> measures how the number of operations/instructions perfromed by an alog grows with input size n. 
+
+numbers = [10,20,30,40,50]
+
+numbers[0] 
+O(1)  : constant 
+
+
+
+q: 
+a = 10 #input 
+b = 20 #input 
+c = a+b 
+print(c)
+
+O(1)
+
+q: 
+a = 10 #input 
+b = 20 #input 
+c = 50
+d = 60 
+c = a+b+c+d 
+print(c)
+O(1)
+
+
+
+Q:
+numbers = [10,20,30,40,50]
+for x in numbers:
+    print(x)
+O(n)  : Linear time 
+
+
+Q: 
+numbers = [10,20,30,40,50]
+sum = 0 
+for x in numbers:
+    print(x)
+    sum = sum + x 
+
+print(sum)
+
+O(1+n+1) => O(n)
+
+
+Q: 
+num = 32
+
+while num > 1 :
+    print(num)
+    num = num // 2 
+
+32->16->8->4->2->1
+50->25->12->6->3->1
+
+O(log n)  Logarithmic time 
+
+Logarithmic time occurs when an alog repeateddly reduces the remaining problem by a constant factor , commonly by half. 
+
+Binary Search 
+0   1   2   3   4   5   6   7 
+10  20  30  40  50  60  70  80 
+min                         max 
+
+search = 70 
+
+mid = (min+max) // 2  => 3  
+
+arr[mid] == search  40 False 
+
+search > arr[mid] => right 
+    min = mid + 1 
+search < arr[mid] => left 
+    max = mid - 1 
+
+
+search = 70  > mid  
+0   1   2   3   4   5   6   7 
+10  20  30  40  50  60  70  80 
+                min         max 
+
+search = 20  < mid 
+0   1   2   3   4   5   6   7 
+10  20  30  40  50  60  70  80 
+min     max    
+
+avg O(log n)
+Best O(1)
+WORST O(log n)
+
+#list , data, array -- must be sorted 
+
+
+Q: 
+n=5
+for i in range(n):
+    for j in range(n):
+        print("Hi")
+
+O(n^2) => Quadratic time 
+
+Q: 
+n=5
+for i in range(n):
+    for j in range(n):
+        for k in range(n):
+            print("Hi")
+
+O(n^3) => Cubic time 
+
+
+
+Factorail time 
+O(n!)
+
+
+
+def generate_binary(n,current=""):
+    if len(current) == n:
+        print(current)
+        return 
+    generate_binary(n,current+"0")
+    generate_binary(n,current+"1")
+    
+generate_binary(3)
+
+000
+001
+010
+011
+100
+101
+110
+111
+
+O(2^n) exonential time 
+
+
+1   2 
+2   4
+3   8
+4   16
+10  1024
+20  1048576
+
+
+Q: 
+def process(a,b):
+    for x in a:
+        print("")
+    
+    for y in b:
+        print("")
+
+process(5,5)
+process(5,50)
+
+O(n) + O(m)
+O(n)
+
+
+Q: 
+n = 20 
+i = 1 
+while i < n : 
+    print(i)
+    i *= 2 
+
+O(log n)
+
+
+Q: 
+n = 20 
+i = 1 
+while i < n : 
+    print(i)
+    i //= 2 
+
+O(log n)
+
+
+
+
+Q: 
+
+i = n 
+#50 => 25 => 12 => 6 => 3 => 1 
+#100=>50=> 25 => 12 => 6 => 3 => 1
+while i > 1 :
+    j = 0
+    while j < n :
+        print("")
+        j = j + 1 
+    i = i //2 
+
+j=> n
+i=> log n 
+
+n * log n 
+O(n log n)
+
+
+
+O(1)
+O(log n)
+O(n)
+O(n log n)
+O(n^2)
+O(n^3)
+O(2^n)
+O(n!)
+
+
+
+n! = n*(n-1)*(n-2)*.....1
+
+
+A B C 
+
+A B C
+B A C 
+C A B 
+A C B 
+B C A
+C B A 
+
+3! = 6 
+
+
+10! => 3628800
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
